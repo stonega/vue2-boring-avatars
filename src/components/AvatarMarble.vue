@@ -50,9 +50,9 @@
       <filter
         id="prefix__filter0_f"
         filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur stdDeviation="7" result="effect1_foregroundBlur" />
       </filter>

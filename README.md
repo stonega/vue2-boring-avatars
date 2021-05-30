@@ -1,24 +1,31 @@
 # vue2-boring-avatars
 
-## Project setup
+Vue port of [Boring Avatars](https://github.com/boringdesigners/boring-avatars)
+
+## Install
+
 ```
-yarn install
+yarn add vue2-boring-avatars
+```
+```
+npm i vue2-boring-avatars
 ```
 
-### Compiles and hot-reloads for development
+## Usage
 ```
-yarn serve
+import Avatar from 'vue2-boring-avatars'
 ```
+```
+<avatar :variant="variant" :colors="colors" :name="name" />
+```                
+## Props
 
-### Compiles and minifies for production
-```
-yarn build
-```
+| Prop    | Type                                                         |
+| ------- | ------------------------------------------------------------ |
+| size    | number or string                                             |
+| name    | string                                                       |
+| variant | oneOf: `marble`, `beam`, `pixel`,`sunset`, `ring`, `bauhaus` |
+| colors  | array of colors                                              |
 
-### Lints and fixes files
-```
-yarn lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Credit to original [Boring Avatars](https://github.com/boringdesigners/boring-avatars) library.
