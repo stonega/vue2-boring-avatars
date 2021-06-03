@@ -1,6 +1,9 @@
 {
   "name": "vue2-boring-avatars",
-  "version": "0.2.0",
+  "description":  "Vue2 port of boring avatars",
+  "version": "0.2.1",
+  "homepage": "https://github.com/stonega/vue2-boring-avatars",
+  "license": "GPL V3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

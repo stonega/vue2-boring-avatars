@@ -18,6 +18,12 @@ import Avatar from 'vue2-boring-avatars'
 ```
 <avatar :variant="variant" :colors="colors" :name="name" />
 ```                
+
+## Demo
+```
+yarn serve
+```
+
 ## Props
 
 | Prop    | Type                                                         |
