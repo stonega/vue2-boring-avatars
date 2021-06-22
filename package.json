@@ -1,7 +1,7 @@
 {
   "name": "@schpnpls/vue2-boring-avatars",
   "description": "Vue2 port of boring avatars",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/stonega/vue2-boring-avatars",
   "license": "GPL v3",
   "scripts": {
@@ -12,8 +12,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-boring-avatars.umd.js",
-  "module": "./dist/vue-boring-avatars.es.js",
+  "main": "./dist/vue-2-boring-avatars.umd.js",
+  "module": "./dist/vue-2-boring-avatars.es.js",
   "exports": {
     ".": {
       "import": "./dist/vue-2-boring-avatars.es.js",
