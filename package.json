@@ -1,13 +1,24 @@
 {
   "name": "vue2-boring-avatars",
-  "description":  "Vue2 port of boring avatars",
+  "description": "Vue2 port of boring avatars",
   "version": "0.2.1",
   "homepage": "https://github.com/stonega/vue2-boring-avatars",
   "license": "GPL V3",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-2-boring-avatars --entry src/index.js",
     "lint": "vue-cli-service lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-boring-avatars.umd.js",
+  "module": "./dist/vue-boring-avatars.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-2-boring-avatars.es.js",
+      "require": "./dist/vue-2-boring-avatars.umd.js"
+    }
   },
   "dependencies": {
     "core-js": "^3.6.5",
