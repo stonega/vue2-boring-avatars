@@ -1,9 +1,9 @@
 {
-  "name": "vue2-boring-avatars",
+  "name": "@schpnpls/vue2-boring-avatars",
   "description": "Vue2 port of boring avatars",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/stonega/vue2-boring-avatars",
-  "license": "GPL V3",
+  "license": "GPL v3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-2-boring-avatars --entry src/index.js",
@@ -52,5 +52,13 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agustif/nuxt-boring-avatars.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/agustif/nuxt-boring-avatars/issues"
+  }
 }
