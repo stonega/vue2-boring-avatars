@@ -30,7 +30,7 @@ yarn serve
 | ------- | ------------------------------------------------------------ |
 | size    | number or string                                             |
 | name    | string                                                       |
-| variant | oneOf: `marble`, `beam`, `pixel`,`sunset`, `ring`, `bauhaus` |
+| variant | oneOf: `marble`, `beam`, `pixels`,`sunset`, `ring`, `bauhaus` |
 | colors  | array of colors                                              |
 
 
