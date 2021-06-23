@@ -1,5 +1,5 @@
 {
-  "name": "@schpnpls/vue2-boring-avatars",
+  "name": "vue2-boring-avatars",
   "description": "Vue2 port of boring avatars",
   "version": "0.3.1",
   "homepage": "https://github.com/stonega/vue2-boring-avatars",
@@ -55,10 +55,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agustif/nuxt-boring-avatars.git"
+    "url": "git+https://github.com/stonega/vue2-boring-avatars.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/agustif/nuxt-boring-avatars/issues"
+    "url": "https://github.com/stonega/vue2-boring-avatars/issues"
   }
 }
