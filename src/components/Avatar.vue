@@ -1,21 +1,16 @@
 <template>
-    <component
-      :is="componentName"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
+  <component :is="componentName" :name="name" :colors="colors" :size="size" />
 </template>
 
 <script>
-import AvatarPixels from "./AvatarPixels";
-import AvatarBauhaus from "./AvatarBauhaus";
-import AvatarMarble from "./AvatarMarble";
-import AvatarRing from "./AvatarRing";
-import AvatarSunset from "./AvatarSunset";
-import AvatarBeam from "./AvatarBeam";
+import AvatarPixels from './AvatarPixels'
+import AvatarBauhaus from './AvatarBauhaus'
+import AvatarMarble from './AvatarMarble'
+import AvatarRing from './AvatarRing'
+import AvatarSunset from './AvatarSunset'
+import AvatarBeam from './AvatarBeam'
 
-const VARIANTS = ["pixels", "bauhaus", "ring", "beam", "sunset", "marble"];
+const VARIANTS = ['pixels', 'bauhaus', 'ring', 'beam', 'sunset', 'marble']
 
 export default {
   components: {
@@ -24,29 +19,30 @@ export default {
     AvatarMarble,
     AvatarSunset,
     AvatarRing,
-    AvatarBeam,
+    AvatarBeam
   },
   props: {
     variant: {
       type: String,
-      default: "pixels",
-      validator: function (value) {
-        return VARIANTS.indexOf(value) !== -1;
-      },
+      default: 'pixels',
+      validator(value) {
+        return VARIANTS.includes(value)
+      }
     },
-    name: { type: String, default: "Mary Baker" },
+    name: { type: String, default: 'Mary Baker' },
     colors: {
       type: Array,
-      default: () => ["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"],
+      default: () => ['#92A1C6', '#146A7C', '#F0AB3D', '#C271B4', '#C20D90']
     },
-    size: { type: Number, default: 80 },
+    size: { type: Number, default: 80 }
   },
-  computed:{
-    componentName(){
-      if(VARIANTS.indexOf(this.variant) === -1){
-        return 'avatar-pixels';
+  computed: {
+    componentName() {
+      if (!VARIANTS.includes(this.variant)) {
+        return 'avatar-pixels'
       }
-      return 'avatar-'+this.variant;
+      return 'avatar-' + this.variant
     }
-};
+  }
+}
 </script>
