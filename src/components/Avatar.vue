@@ -1,42 +1,10 @@
 <template>
-  <main>
-    <avatar-pixels
-      v-if="variant === 'pixels'"
+    <component
+      :is="componentName"
       :name="name"
       :colors="colors"
       :size="size"
     />
-    <avatar-bauhaus
-      v-if="variant === 'bauhaus'"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
-    <avatar-marble
-      v-if="variant === 'marble'"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
-    <avatar-ring
-      v-if="variant === 'ring'"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
-    <avatar-sunset
-      v-if="variant === 'sunset'"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
-    <avatar-beam
-      v-if="variant === 'beam'"
-      :name="name"
-      :colors="colors"
-      :size="size"
-    />
-  </main>
 </template>
 
 <script>
@@ -73,10 +41,12 @@ export default {
     },
     size: { type: Number, default: 80 },
   },
-  data() {
-    return {
-      variants: VARIANTS,
-    };
-  },
+  computed:{
+    componentName(){
+      if(VARIANTS.indexOf(this.variant) === -1){
+        return 'avatar-pixels';
+      }
+      return 'avatar-'+this.variant;
+    }
 };
 </script>
