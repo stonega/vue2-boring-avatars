@@ -30,7 +30,7 @@
         :fill="properties[1].color"
         :transform="`translate(${properties[1].translateX} ${
           properties[1].translateY
-        } rotate(${properties[1].rotate} ${viewboxSize / 2} ${
+        }) rotate(${properties[1].rotate} ${viewboxSize / 2} ${
           viewboxSize / 2
         }) scale(${properties[2].scale})`"
       />
