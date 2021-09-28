@@ -1,65 +1,65 @@
 {
-  "name": "vue2-boring-avatars",
-  "description": "Vue2 port of boring avatars",
-  "version": "0.3.3",
-  "homepage": "https://github.com/stonega/vue2-boring-avatars",
-  "license": "GPL v3",
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name vue-2-boring-avatars --entry src/index.js",
-    "lint": "vue-cli-service lint"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/vue-2-boring-avatars.umd.js",
-  "module": "./dist/vue-2-boring-avatars.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue-2-boring-avatars.es.js",
-      "require": "./dist/vue-2-boring-avatars.umd.js"
-    }
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-color": "^2.8.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "vue2-boring-avatars",
+    "description": "Vue2 port of boring avatars",
+    "version": "0.3.4",
+    "homepage": "https://github.com/stonega/vue2-boring-avatars",
+    "license": "GPL v3",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "build:lib": "vue-cli-service build --target lib --name vue-2-boring-avatars --entry src/index.js",
+        "lint": "vue-cli-service lint"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+    "files": [
+        "dist"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "main": "./dist/vue-2-boring-avatars.umd.js",
+    "module": "./dist/vue-2-boring-avatars.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/vue-2-boring-avatars.es.js",
+            "require": "./dist/vue-2-boring-avatars.umd.js"
+        }
     },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stonega/vue2-boring-avatars.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/stonega/vue2-boring-avatars/issues"
-  }
+    "dependencies": {
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11",
+        "vue-color": "^2.8.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stonega/vue2-boring-avatars.git"
+    },
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/stonega/vue2-boring-avatars/issues"
+    }
 }
