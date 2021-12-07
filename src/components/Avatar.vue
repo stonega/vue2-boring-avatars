@@ -1,5 +1,5 @@
 <template>
-  <component :is="componentName" :name="name" :colors="colors" :size="size" />
+  <component :is="componentName" :name="name" :colors="colors" :size="size" :square="square"/>
 </template>
 
 <script>
@@ -34,7 +34,8 @@ export default {
       type: Array,
       default: () => ['#92A1C6', '#146A7C', '#F0AB3D', '#C271B4', '#C20D90']
     },
-    size: { type: Number, default: 80 }
+    size: { type: Number, default: 80 },
+    square: { type: Boolean, default: false }
   },
   computed: {
     componentName() {

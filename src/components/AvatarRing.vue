@@ -6,8 +6,23 @@
       :width="size"
       :height="size"
     >
-      <path d="M90 45a45.001 45.001 0 00-76.82-31.82A45 45 0 000 45h90z" :fill="cellColors[0]" />
-      <path d="M90 45a45.001 45.001 0 01-76.82 31.82A45 45 0 010 45h90z" :fill="cellColors[1]" />
+    <mask
+      id="mask__ring"
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      :width="viewboxSize"
+      :height="viewboxSize"
+    >
+      <rect
+        :width="viewboxSize"
+        :height="viewboxSize"
+        :rx="square ? undefinded : viewboxSize / 2"
+        fill="#fff"
+      />
+    </mask>
+      <path d="M0 0h90v45H0z" :fill="cellColors[0]"/>
+      <path d="M0 45h90v45H0z" :fill="cellColors[1]"/>
       <path d="M83 45a38 38 0 00-76 0h76z" :fill="cellColors[2]" />
       <path d="M83 45a38 38 0 01-76 0h76z" :fill="cellColors[3]" />
       <path d="M77 45a32 32 0 10-64 0h64z" :fill="cellColors[4]" />
@@ -28,6 +43,7 @@ export default {
     name: { type: String, required: true },
     colors: { type: Array, required: true },
     size: { type: Number, required: true },
+    square: { type: Boolean, default: false }
   },
   data() {
     return {

@@ -17,7 +17,7 @@
       <rect
         :width="viewboxSize"
         :height="viewboxSize"
-        :rx="viewboxSize / 2"
+        :rx="square ? undefinded : viewboxSize / 2"
         fill="#fff"
       />
     </mask>
@@ -25,7 +25,6 @@
       <rect
         :width="viewboxSize"
         :height="viewboxSize"
-        :rx="viewboxSize / 2"
         :fill="properties[0].color"
       />
       <rect
@@ -73,6 +72,7 @@ export default {
     name: { type: String, required: true },
     colors: { type: Array, required: true },
     size: { type: Number, required: true },
+    square: { type: Boolean, default: false }
   },
   data() {
     return {

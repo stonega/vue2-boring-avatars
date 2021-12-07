@@ -13,6 +13,8 @@
             {{ v }}
           </div>
         </div>
+        <input type="checkbox" id="shape" name="shape" v-model="square">
+        <div class="square">Square</div>
         <div class="color-button">
           <div v-for="(color, index) in colors" :key="index">
             <color-dot
@@ -25,7 +27,7 @@
     </div>
     <section class="avatar-list">
       <div v-for="(name, index) in names" :key="index">
-        <avatar :variant="variant" :colors="colors" :name="name" />
+        <avatar :variant="variant" :colors="colors" :name="name" :square="square" />
         <p>{{ name }}</p>
       </div>
     </section>
@@ -48,6 +50,7 @@ export default {
       colors: ["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"],
       variants: VARIANTS,
       variant: "pixels",
+      square: false,
       names: ["Tether", "Uniswap", "ChainLink", "Automata", "Binance"],
     };
   },
@@ -110,5 +113,8 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+.square {
+  padding-right: 1rem;
 }
 </style>

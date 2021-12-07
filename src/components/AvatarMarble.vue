@@ -14,14 +14,18 @@
       :width="viewboxSize"
       :height="viewboxSize"
     >
-      <path
-        d="M80 40C80 17.909 62.091 0 40 0S0 17.909 0 40s17.909 40 40 40 40-17.909 40-40z"
+      <rect
+        :width="viewboxSize"
+        :height="viewboxSize"
+        :rx="square ? undefinded : viewboxSize / 2"
         fill="#fff"
       />
     </mask>
     <g mask="url(#mask__marble)">
       <path
-        d="M80 40C80 17.909 62.091 0 40 0S0 17.909 0 40s17.909 40 40 40 40-17.909 40-40z"
+        :width="viewboxSize"
+        :height="viewboxSize"
+        :rx="2"
         :fill="properties[0].color"
       />
       <path
@@ -52,9 +56,9 @@
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood :flood-opacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="7" result="effect1_foregroundBlur" />
+        <feGaussianBlur :stdDeviation="7" result="effect1_foregroundBlur" />
       </filter>
     </defs>
   </svg>
@@ -69,6 +73,7 @@ export default {
     name: { type: String, required: true },
     colors: { type: Array, required: true },
     size: { type: Number, required: true },
+    square: { type: Boolean, default: false }
   },
   data() {
     return {

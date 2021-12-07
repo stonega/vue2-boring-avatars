@@ -15,7 +15,12 @@
       :width="viewboxSize"
       :height="viewboxSize"
     >
-      <circle :cx="viewboxSize/2" :cy="viewboxSize/2" :r="viewboxSize/2" fill="white" />
+      <rect
+        :width="viewboxSize"
+        :height="viewboxSize"
+        :rx="square ? undefinded : viewboxSize / 2"
+        fill="#fff"
+      />
     </mask>
     <g mask="url(#mask0)">
       <rect width="10" height="10" :fill="properties[0].color" />
@@ -389,7 +394,8 @@ export default {
   props: {
     name: { type: String, required: true },
     colors: { type: Array, required: true },
-    size: { type: Number, required: true}
+    size: { type: Number, required: true},
+    square: { type: Boolean, default: false }
   },
   data() {
     return {
