@@ -32,6 +32,6 @@ yarn serve
 | name    | string                                                       |
 | variant | oneOf: `marble`, `beam`, `pixels`,`sunset`, `ring`, `bauhaus` |
 | colors  | array of colors                                              |
-
+| square  | bool                                              |
 
 Credit to original [Boring Avatars](https://github.com/boringdesigners/boring-avatars) library.
