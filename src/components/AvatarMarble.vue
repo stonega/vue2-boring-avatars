@@ -22,7 +22,7 @@
       />
     </mask>
     <g mask="url(#mask__marble)">
-      <path
+      <rect
         :width="viewboxSize"
         :height="viewboxSize"
         :rx="2"
