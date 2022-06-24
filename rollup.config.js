@@ -4,7 +4,6 @@ import del from 'rollup-plugin-delete';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
 import resolve from '@rollup/plugin-node-resolve';
-
 import path from 'path';
 
 const plugins = [
@@ -17,7 +16,7 @@ const plugins = [
   vue(),
   esbuild({
     target: 'es2017',
-    minify: false,
+    minify: true,
   }),
 ];
 
