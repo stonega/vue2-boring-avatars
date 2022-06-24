@@ -1,7 +1,9 @@
 import vue from 'rollup-plugin-vue';
 import alias from '@rollup/plugin-alias';
-import del from 'rollup-plugin-delete'
-import { terser } from 'rollup-plugin-terser';
+import del from 'rollup-plugin-delete';
+import commonjs from '@rollup/plugin-commonjs';
+import esbuild from 'rollup-plugin-esbuild';
+import resolve from '@rollup/plugin-node-resolve';
 
 import path from 'path';
 
@@ -10,7 +12,13 @@ const plugins = [
   alias({
     entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   }),
+  resolve(),
+  commonjs(),
   vue(),
+  esbuild({
+    target: 'es2017',
+    minify: false,
+  }),
 ];
 
 export default [
@@ -19,7 +27,7 @@ export default [
     output: [
       {
         name: 'vue-2-boring-avatars',
-        file: 'dist/vue-2-boring-avatars.mjs',
+        file: 'dist/vue-2-boring-avatars.es.js',
         format: 'esm',
         globals: { vue: 'Vue' },
         sourcemap: true,
@@ -38,14 +46,6 @@ export default [
         format: 'umd',
         globals: { vue: 'Vue' },
         sourcemap: true,
-      },
-      {
-        name: 'vue-2-boring-avatars',
-        file: 'dist/vue-2-boring-avatars.umd.min.js',
-        format: 'umd',
-        globals: { vue: 'Vue' },
-        sourcemap: true,
-        plugins: [terser()],
       },
     ],
     plugins,
