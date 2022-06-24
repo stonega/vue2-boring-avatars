@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import AvatarPixels from './AvatarPixels'
-import AvatarBauhaus from './AvatarBauhaus'
-import AvatarMarble from './AvatarMarble'
-import AvatarRing from './AvatarRing'
-import AvatarSunset from './AvatarSunset'
-import AvatarBeam from './AvatarBeam'
+import AvatarPixels from './AvatarPixels.vue'
+import AvatarBauhaus from './AvatarBauhaus.vue'
+import AvatarMarble from './AvatarMarble.vue'
+import AvatarRing from './AvatarRing.vue'
+import AvatarSunset from './AvatarSunset.vue'
+import AvatarBeam from './AvatarBeam.vue'
 
 const VARIANTS = ['pixels', 'bauhaus', 'ring', 'beam', 'sunset', 'marble']
 
