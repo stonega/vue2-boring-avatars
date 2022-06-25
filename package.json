@@ -7,11 +7,12 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "build:lib": "vue-cli-service build --target lib --name vue-2-boring-avatars --entry src/index.js",
+        "build:lib": "rollup --config",
         "lint": "vue-cli-service lint"
     },
     "files": [
-        "dist"
+        "dist",
+        "src"
     ],
     "main": "./dist/vue-2-boring-avatars.umd.js",
     "module": "./dist/vue-2-boring-avatars.es.js",
@@ -27,12 +28,20 @@
         "vue-color": "^2.8.1"
     },
     "devDependencies": {
+        "@rollup/plugin-alias": "^3.1.9",
+        "@rollup/plugin-commonjs": "^22.0.1",
+        "@rollup/plugin-node-resolve": "^13.3.0",
         "@vue/cli-plugin-babel": "~4.5.0",
         "@vue/cli-plugin-eslint": "~4.5.0",
         "@vue/cli-service": "~4.5.0",
         "babel-eslint": "^10.1.0",
+        "esbuild": "^0.14.47",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^6.2.2",
+        "rollup": "^2.75.7",
+        "rollup-plugin-delete": "^2.0.0",
+        "rollup-plugin-esbuild": "^4.9.1",
+        "rollup-plugin-vue": "^5.0.0",
         "vue-template-compiler": "^2.6.11"
     },
     "eslintConfig": {
